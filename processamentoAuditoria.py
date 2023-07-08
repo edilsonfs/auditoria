@@ -20,7 +20,8 @@ def lerProcessos(mesCorrente):
     arquivoRetorno = open(nome_arquivo_saida, "a")
 
     for linha in conjunto:
-        print(linha)
+        # print(linha)
         arquivoRetorno.write(linha+"\n")
+
 
 lerProcessos("Julho")
