@@ -19,8 +19,14 @@ def lerProcessos(mesCorrente):
     nome_arquivo_saida = "relacaoAuditoria"+mesCorrente+".csv"
     arquivoRetorno = open(nome_arquivo_saida, "a")
 
-    for linha in conjunto:
-        print(linha)
-        arquivoRetorno.write(linha+"\n")
+    arquivoRetorno.write("NPU,CAMINHO")
 
-lerProcessos("Julho")
+    for linha in conjunto:
+        # print(linha)
+        if linha.count(',') >= 2:
+            print(linha)
+        else:
+            arquivoRetorno.write(linha+"\n")
+
+
+lerProcessos("Agosto")
