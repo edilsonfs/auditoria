@@ -1,12 +1,12 @@
 import os
 
 # path = "C:\\Users\\edils\\OneDrive\\Documentos\\Projeto\\arquivosMaio"
-MES = "Julho"
+MES = "Agosto"
 PATH_RELATIVO = "auditoria"+MES
 lista = os.listdir(PATH_RELATIVO)
 processoNPU = []
-ARQUIVO_SAIDA = "resultado"+MES+"Junho.csv"
-TIPO_ESCRITA = "a"
+ARQUIVO_SAIDA = "resultado"+MES+".csv"
+TIPO_ESCRITA = "w"
 
 
 def lerPasta(pasta):
@@ -29,6 +29,8 @@ for a in lista:
       #  processoNPU.append(l[marcador-7:marcador+18])
 
 NPUs = set(processoNPU)
+
 r = open(ARQUIVO_SAIDA, TIPO_ESCRITA)
+r.truncate()
 for p in NPUs:
     r.write(p+"\n")

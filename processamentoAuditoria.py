@@ -17,9 +17,8 @@ def lerProcessos(mesCorrente):
                 line[posicaoMarcador-7:posicaoMarcador+18]+","+line[:posicaoMarcador+18])
     conjunto = set(NpuProcessos)
     nome_arquivo_saida = "relacaoAuditoria"+mesCorrente+".csv"
-    arquivoRetorno = open(nome_arquivo_saida, "a")
-
-    arquivoRetorno.write("NPU,CAMINHO")
+    arquivoRetorno = open(nome_arquivo_saida, "w")
+    arquivoRetorno.write("NPU,CAMINHO \n")
 
     for linha in conjunto:
         # print(linha)
